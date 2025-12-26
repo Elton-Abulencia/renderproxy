@@ -1,13 +1,11 @@
 services:
-  - type: web
-    name: my-forward-proxy
+  - type: tcp
+    name: socks5-proxy
     env: node
-    region: oregon
-    branch: main
-    buildCommand: npm install
-    startCommand: npm start
-    autoDeploy: true
     plan: free
+    buildCommand: ""
+    startCommand: "bun run rend.ts"
+    autoDeploy: true
     envVars:
-      - key: NODE_ENV
-        value: production
+      - key: PORT
+        sync: false
