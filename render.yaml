@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: my-forward-proxy
+    env: node
+    region: oregon
+    branch: main
+    buildCommand: npm install
+    startCommand: npm start
+    autoDeploy: true
+    plan: free
+    envVars:
+      - key: NODE_ENV
+        value: production

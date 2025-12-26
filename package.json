@@ -1,0 +1,11 @@
+{
+  "name": "renderproxy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "anyproxy": "^4.1.3"
+  }
+}
